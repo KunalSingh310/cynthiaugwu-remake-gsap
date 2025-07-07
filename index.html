@@ -4,35 +4,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>❤️💻</title>
+    <title>Cynthia Ugwu Remake gsap</title>
+    <link rel="stylesheet" href="loco.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
+    <div id="minicircle"></div>
     <div id="main">
         <div id="hero">
             <div id="nav">
                 <a href="#">Cynthia Ugwu</a>
-                <h4>MENU+</h4>
+                <h4 class="underline-hover">MENU+
+                    <span class="underline-bar"></span>
+                </h4>
+                
             </div>
             <div id="heading">
-                <h1>PRODUCT</h1>
+                <div class="anim">
+                    <h1 class="headingAnimEle">PRODUCT</h1>
+                </div>
                 <div class="blocktext">
-                    <h1 id="secondh1">DESIGNER</h1>
-                    <h5>Based in toronto</h5>
+                    <div class="anim">
+                        <h1 class="headingAnimEle" id="secondh1">DESIGNER</h1>
+                    </div>
+                    <div class="anim1">
+                        <h5 class="headingAnimEle2">Based in toronto</h5>
+                    </div>
                 </div>
             </div>
             <div id="bottom">
-                <h5>Available for Full Time & Freelance</h5>
-                <h5>work from Sep ‘24</h5>
+                <div class="anim">
+                    <h5 class="bottomAnim">Available for Full Time & Freelance</h5>
+                </div>
+                <div class="anim">
+                    <h5 class="bottomAnim">work from Sep ‘24</h5>
+                </div>
             </div>
             <div id="herofooter">
-                <a href="#"><span>Previously worked at </span> <i class="ri-arrow-right-up-line"></i><br><span>code and
+                <!-- <a href="#"><span>Previously worked at </span> <i class="ri-arrow-right-up-line"></i><br><span>code and
                         theory</span>
+                </a> -->
+                <a href="#" class="underline-hover">
+                    <span>Previously worked at </span> <i class="ri-arrow-right-up-line"></i><br><span>code and
+                        theory</span>
+                    <span class="underline-bar"></span>
                 </a>
-                <a href="#">Protopie ambassador <i class="ri-arrow-right-up-line"></i></a>
+                <a href="#" class="underline-hover">
+                    Protopie ambassador <i class="ri-arrow-right-up-line"></i>
+                    <span class="underline-bar"></span>
+                </a>
+
+                <!-- <a href="#">Protopie ambassador <i class="ri-arrow-right-up-line"></i></a> -->
                 <div id="iconset">
                     <div class="circle"><i class="ri-arrow-down-line"></i></div>
                     <div class="circle"><i class="ri-arrow-down-line"></i></div>
@@ -41,50 +66,50 @@
         </div>
         <div id="second">
             <div class="elem">
-                <img src="lucid-motors.webp" alt="">
+                <img src="img/lucid-motors.webp" alt="">
                 <h1>lucid motors</h1>
                 <h5>2023</h5>
             </div>
             <div class="elem">
-                <img src="baron-capital.webp" alt="">
+                <img src="img/baron-capital.webp" alt="">
                 <h1>baron capital</h1>
                 <h5>2023</h5>
             </div>
             <div class="elem">
-                <img src="nfl.webp" alt="">
+                <img src="img/nfl.webp" alt="">
                 <h1>nfl</h1>
                 <h5>2024</h5>
             </div>
             <div class="elem">
-                <img src="placenew.webp" alt="">
+                <img src="img/placenew.webp" alt="">
                 <h1>placenew</h1>
                 <h5>2024</h5>
             </div>
             <div class="elem elemlast">
-                <img src="somos.webp" alt="">
+                <img src="img/somos.webp" alt="">
                 <h1>somos</h1>
                 <h5>2023</h5>
             </div>
             <div id="viewallwork">
                 <a href="#">View all work</a>
             </div>
-        </div>        
+        </div>
         <div id="roller">
             <div id="rollerlogo">
-                <img src="AVIS.svg" alt="">
-                <img src="Clover.svg" alt="">
-                <img src="Expedia.svg" alt="">
-                <img src="Baron.svg" alt="">
-                <img src="ETS.svg" alt="">
-                <img src="Lucid.svg" alt="">
-                <img src="Identity.svg" alt="">
-                <img src="Microsoft.svg" alt="">
-                <img src="Under_armour.svg" alt="">
-                <img src="NFL.svg" alt="">
-                <img src="NEOM.svg" alt="">
-                <img src="Comcast.svg" alt="">
-                <img src="Zappos.svg" alt="">
-                <img src="Toefl.svg" alt="">
+                <img src="svg/AVIS.svg" alt="">
+                <img src="svg/Clover.svg" alt="">
+                <img src="svg/Expedia.svg" alt="">
+                <img src="svg/Baron.svg" alt="">
+                <img src="svg/ETS.svg" alt="">
+                <img src="svg/Lucid.svg" alt="">
+                <img src="svg/Identity.svg" alt="">
+                <img src="svg/Microsoft.svg" alt="">
+                <img src="svg/Under_armour.svg" alt="">
+                <img src="svg/NFL.svg" alt="">
+                <img src="svg/NEOM.svg" alt="">
+                <img src="svg/Comcast.svg" alt="">
+                <img src="svg/Zappos.svg" alt="">
+                <img src="svg/Toefl.svg" alt="">
                 <div class="spacer"></div>
             </div>
         </div>
@@ -92,10 +117,15 @@
             <img src="https://cynthiaugwu.com/images/cynthia.webp" alt="">
             <div id="textabout">
                 <h5>(about me)</h5>
-                <p>I'm a product and motion designer who loves creating things that are not just eye candy but also fix life's little hiccups. When I'm not glued to my computer like a robot or scribbling on my iPad, you might catch me leveling up in video games, snapping photos like a wannabe pro, or watching football because football is life. My design philosophy? Keep it snazzy, make it work, and sprinkle in a bit of fun. I'm the designer you want on your team if you want people to exclaim, "I need that in my life!".</p>
+                <p>I'm a product and motion designer who loves creating things that are not just eye candy but also fix
+                    life's little hiccups. When I'm not glued to my computer like a robot or scribbling on my iPad, you
+                    might catch me leveling up in video games, snapping photos like a wannabe pro, or watching football
+                    because football is life. My design philosophy? Keep it snazzy, make it work, and sprinkle in a bit
+                    of fun. I'm the designer you want on your team if you want people to exclaim, "I need that in my
+                    life!".</p>
                 <a href="#">Let's talk</a>
             </div>
-        </div>    
+        </div>
         <div id="subs">
             <h5>oops,almost forgot...</h5>
             <a href="#">subscribe to my youtube channel <i class="ri-arrow-right-up-line"></i></a>
@@ -110,21 +140,11 @@
             </div>
         </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script>
-    const track = document.querySelector("#rollerlogo");
-
-  // Clone all logos
-  const clone = track.cloneNode(true);
-  track.parentElement.appendChild(clone);
-
-  gsap.to("#rollerlogo", {
-    xPercent: -100,
-    ease: "linear",
-    duration: 40,
-    repeat: -1,
-  });
-</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+        integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+    <script src="script.js"></script>
 
 
 </body>

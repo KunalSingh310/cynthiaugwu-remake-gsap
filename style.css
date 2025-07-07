@@ -1,38 +1,81 @@
 @font-face {
-  font-family: 'General Sans Regular';
-  src: url('./fonts/GeneralSans-Regular.otf') format('opentype');
-  /* font-weight: 400; */
-  /* font-style: normal; */
+    font-family: 'General Sans Regular';
+    src: url('./fonts/GeneralSans-Regular.otf') format('opentype');
+    /* font-weight: 400; */
+    /* font-style: normal; */
 }
 
 @font-face {
-  font-family: 'General Sans Medium';
-  src: url('./fonts/GeneralSans-Medium.otf') format('opentype');
-  /* font-weight: 500; */
-  /* font-style: normal; */
+    font-family: 'General Sans Medium';
+    src: url('./fonts/GeneralSans-Medium.otf') format('opentype');
+    /* font-weight: 500; */
+    /* font-style: normal; */
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "General Sans Regular";
     font-weight: 800;
 }
-html,body{
+
+html,
+body {
     width: 100%;
     height: 100%;
 }
-#main{
-    width: 100%;
+
+/* underline hover effect */
+.underline-hover {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
 }
-#hero{ 
+
+.underline-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background-color: white;
+  transform: translateX(-100%);
+  pointer-events: none;
+}
+
+
+#minicircle {
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    z-index: 99999;
+    border-radius: 50%;
+    background-color: white;
+    pointer-events: none;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* soft shadow for depth */
+    mix-blend-mode: difference;
+}
+
+
+
+#main {
+    width: 100%;
+    background-color: black;
+}
+
+#hero {
+    position: relative;
     color: #fff;
     width: 100%;
     height: 100vh;
     background-color: black;
 }
-#nav{
+
+#nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -40,18 +83,43 @@ html,body{
     padding: 35px 45px;
     color: #fff;
 }
-#nav h4{
+
+#nav h4 {
     font-weight: 200;
 }
-#nav a{
+
+#nav a {
     text-decoration: none;
     font-size: 18px;
     color: white;
 }
-#heading{
+
+#heading {
     margin-top: 35px;
 }
-#heading h1{
+
+.anim {
+    width: fit-content;
+    /* background-color: salmon; */
+    overflow: hidden;
+}
+
+.anim1 {
+    width: fit-content;
+    /* background-color: salmon; */
+    overflow: hidden;
+    /* background-color: #fff; */
+}
+
+.headingAnimEle {
+    transform: translateY(100%);
+}
+
+.headingAnimEle2 {
+    transform: translateY(-100%);
+}
+
+#heading h1 {
     margin-left: 4vw;
     opacity: .65;
     line-height: 0.9;
@@ -61,22 +129,28 @@ html,body{
     font-weight: 580;
 
 }
-#heading #secondh1{
+
+#heading #secondh1 {
     margin-left: 14vw;
+    padding-bottom: 15px;
 }
-#heading h5{
-    margin-top: 10px;
-}
-.blocktext{
+
+
+
+.blocktext {
     /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    align-items: end;
     width: fit-content;
 }
-.blocktext h5{
+
+.blocktext h5 {
     /* font-weight: 580; */
-    text-align: right;
+    /* background-color: yellow; */
     text-transform: uppercase;
     font-size: 1em;
-    
+
 }
 
 #bottom {
@@ -84,14 +158,23 @@ html,body{
     margin-top: 165px;
     text-transform: uppercase;
     color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
 }
-#bottom h5{
+
+.bottomAnim {
+    transform: translateY(-100%);
+}
+
+#bottom h5 {
     padding-right: 45px;
-    text-align: right;
+    /* text-align: right; */
     font-size: 1.04vw;
     /* font-weight: 480; */
 }
-#herofooter{
+
+#herofooter {
     padding: 30px 50px;
     width: 100%;
     position: absolute;
@@ -100,16 +183,19 @@ html,body{
     align-items: center;
     justify-content: space-between;
 }
-#herofooter a{
+
+#herofooter a {
     color: #fff;
     text-transform: uppercase;
     text-decoration: none;
 }
-#herofooter #iconset{
+
+#herofooter #iconset {
     display: flex;
     gap: 4px;
 }
-#herofooter .circle{
+
+#herofooter .circle {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -131,44 +217,69 @@ html,body{
     background-color: black;
     width: 100%;
 }
-.elem{
-    overflow: visible;
+
+
+.elem {
     position: relative;
     display: flex;
-    align-content: center;
+    align-items: center;
     justify-content: space-between;
-    /* padding: 3.5vw 3vw; */
     width: 100%;
+    /* padding: 1vw 3vw; */
     padding-right: 0;
     border-top: 1px solid #888;
 }
-.elem h1{
+.elem h1 {
     padding: 3.5vw 0;
     text-transform: uppercase;
     font-size: 6.5vw;
     opacity: .65;
 }
-.elem h5{
+
+.elem h5 {
     align-self: center;
     font-size: 1vw;
 }
-.elemlast{
+
+.elemlast {
     border-bottom: 1px solid #888;
 }
 
-.elem img{
-    display: none;
-    position: absolute;
-    height: 140%;
-    z-index: 999;
+/* .elem img {
+    /* display: none; */
+    /* opacity: 0; */
+    /* position: absolute; */
+    /* height: 140%; */
+    /* z-index: 999; */
     /* top: ;
     bottom: 50%; */
+.elem img {
+    opacity: 0;
+    pointer-events: none;
+    height: 150%;
+    z-index: 999;
+    position: absolute;
+    border-radius: 10px;
+    transform: translate(-50%, -50%);
 }
-/* (nhi horhi image us border ke upr nhi jarhi height 140% krne pe bhi dk why) */
-#viewallwork{
+/* .elem img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    height: 300px;
+    opacity: 0;
+    pointer-events: none;
+    border-radius: 20px;
+    /* transition: opacity 0.3s ease, transform 0.3s ease; */
+    /* z-index: 9;
+} */ 
+
+#viewallwork {
     padding-top: 40px;
 }
-#viewallwork a{
+
+#viewallwork a {
     text-decoration: none;
     color: #fff;
     border: 1px solid #fff;
@@ -176,9 +287,10 @@ html,body{
     padding: 7px 22px;
     font-weight: 550;
 }
+
 /* roller bnega yaha */
 
-#roller{
+#roller {
     overflow: hidden;
     white-space: nowrap;
     background-color: black;
@@ -187,15 +299,16 @@ html,body{
     border-bottom: 1px solid #888;
     /* display: flex; */
 }
-#rollerlogo{
+
+#rollerlogo {
     display: inline-flex;
     /* flex-wrap: wrap; */
-    gap: 150px;    
+    gap: 150px;
 }
 
 
 /* AB ABOUT START HOGA LAADLE */
-#about{
+#about {
     display: flex;
     align-items: center;
     color: #fff;
@@ -205,24 +318,29 @@ html,body{
     background-color: black;
     gap: 70px;
 }
-#about img{
+
+#about img {
     width: 250px;
 }
-#textabout{
+
+#textabout {
     width: 30rem;
 }
-#textabout h5{
+
+#textabout h5 {
     text-transform: uppercase;
-    opacity: .6;  
-    margin-bottom: 8px;  
+    opacity: .6;
+    margin-bottom: 8px;
 }
-#textabout p{
+
+#textabout p {
     line-height: 1.5;
     margin-bottom: 25px;
     font-size: 17px;
     font-weight: 580;
 }
-#textabout a{
+
+#textabout a {
     padding: 6px 23px;
     border-radius: 20px;
     text-decoration: none;
@@ -230,20 +348,23 @@ html,body{
     border: 1px solid #fff;
 
 }
+
 /* subscribe wala agya laadle */
 
-#subs{
+#subs {
     background-color: black;
     width: 100%;
     color: #fff;
     padding: 20px 50px;
     padding-bottom: 100px;
 }
-#subs h5{
+
+#subs h5 {
     opacity: .6;
     text-transform: uppercase;
 }
-#subs a{
+
+#subs a {
     text-transform: uppercase;
     text-decoration: none;
     font-size: 15px;
@@ -252,7 +373,7 @@ html,body{
 
 /* footer start hogya laadle */
 
-#footer{
+#footer {
     background-color: black;
     color: #fff;
     display: flex;
@@ -262,16 +383,19 @@ html,body{
     padding-bottom: 40px;
     font-size: 18px;
 }
-#footerleft{
+
+#footerleft {
     display: flex;
     gap: 20px;
 }
-#footer a{
+
+#footer a {
     text-decoration: none;
     color: #fff;
     font-size: 16px;
 }
-#footerright{
+
+#footerright {
     display: flex;
     gap: 30px;
 }
