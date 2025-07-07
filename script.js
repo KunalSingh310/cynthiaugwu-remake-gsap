@@ -5,7 +5,7 @@ const scroll = new LocomotiveScroll({
 });
 
 window.addEventListener("load", () => {
-    scroll.update(); // Recalculate height
+    scroll.update(); 
 });
 
 
